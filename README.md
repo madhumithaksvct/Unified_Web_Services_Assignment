@@ -45,4 +45,3 @@ Madhumitha K
 | Checkout test failed due to slow cart loading | Added explicit `WebDriverWait` for cart badge and checkout button. |
 | Writing 25 unique test cases | Structured by module (Login, Signup, Conversation, File Upload, History, Settings, Edge). |
 
-## Repository Structure
