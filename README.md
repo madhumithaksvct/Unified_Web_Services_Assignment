@@ -4,30 +4,45 @@
 ## Candidate Name
 Madhumitha K
 
-## Tools and Frameworks Used
+## Tools and Frameworks Used (Completed Tasks)
 
 | Category | Tools / Frameworks |
 |----------|---------------------|
-| Manual Testing | Microsoft Excel (test case writing) |
+| Manual Testing | Microsoft Excel |
 | Automation Testing | Java, Selenium WebDriver, TestNG, Maven, WebDriverManager |
-| Performance Testing | Apache JMeter 5.6.3 |
-| Version Control | Git, GitHub |
 
 ## Tasks Completed
 
-- [x] **Task 1:** 25 manual test cases for Claude.ai (login, signup, conversation, file upload, history, settings, edge cases) – `claude_testcases.xlsx`
-- [x] **Task 2:** Automation scripts for SauceDemo – includes valid login + checkout flow, locked user login error verification, Page Object Model, TestNG assertions, explicit waits – `sauce_demo_automation/`
-- [x] **Task 3:** Load test for ReqRes API – 50 concurrent users, 2-minute duration, metrics report – `load_test/reqres_load_test.jmx` and `load_test_report.md`
+- [x] **Task 1:** 25 manual test cases for Claude.ai – `claude_testcases.xlsx`
+- [x] **Task 2:** Automation scripts for SauceDemo (login, checkout, locked user test) – `sauce_demo_automation/`
+- [ ] **Task 3:** Performance testing (ReqRes API) – *in progress / will be added soon*
 
 ## How to Run Automation Tests (Task 2)
 
 ### Prerequisites
-- Java JDK 17 or higher installed
-- Maven installed (or use IDE's built-in Maven)
-- Chrome browser installed
+- Java JDK 17+
+- Maven
+- Chrome browser
 
-### Setup & Execution Steps
+### Steps
+1. Go to the `sauce_demo_automation` folder.
+2. Run `mvn clean test` (or use IDE: right-click `testng.xml` → Run as TestNG Suite).
+3. Test report is generated in `test-output/index.html`.
 
-1. **Clone or navigate to the automation folder:**
-   ```bash
-   cd sauce_demo_automation
+## How to Run Load Tests (Task 3 – Not Yet Completed)
+
+*This section will be updated once the JMeter/k6 test is finished.*
+
+## Assumptions & Issues Faced (For Completed Tasks)
+
+### Assumptions
+- Claude.ai test cases assume a free account is available; UI element names may vary.
+- Automation tests use Chrome and WebDriverManager – no manual driver setup.
+
+### Issues Faced & Resolutions
+| Issue | Resolution |
+|-------|-------------|
+| Checkout test failed due to slow cart loading | Added explicit `WebDriverWait` for cart badge and checkout button. |
+| Writing 25 unique test cases | Structured by module (Login, Signup, Conversation, File Upload, History, Settings, Edge). |
+
+## Repository Structure
